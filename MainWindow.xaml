@@ -5,81 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicPlayer"
         mc:Ignorable="d"
-        Title="Kozify" Height="450" Width="800" Closing="Window_Closing">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Play" HorizontalAlignment="Left" Margin="186,10,0,0" VerticalAlignment="Top" Width="313" Click="Play" Height="156" FontSize="50"/>
-        <Button x:Name="csocs" Content="Csöcs" HorizontalAlignment="Left" Margin="233,252,0,0" VerticalAlignment="Top" Width="226" Click="Load" Height="87" FontSize="50" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="52.392"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button x:Name="uram" Content="Uram" HorizontalAlignment="Left" Margin="30,266,0,0" VerticalAlignment="Top" Width="196" Click="Load" Height="91" FontSize="50" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="46.817"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button Content="Stop" HorizontalAlignment="Left" Margin="412,116,0,0" VerticalAlignment="Top" Width="371" Click="Stop" Height="157" FontSize="50" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-45.52"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Label Content="Kozify" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="87" Width="516" FontSize="50"/>
-        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="50,221,0,0" VerticalAlignment="Top" Width="694" RenderTransformOrigin="0.5,0.5" ValueChanged="SetValue">
-            <Slider.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="23.063"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Slider.RenderTransform>
-        </Slider>
-        <Button x:Name="toki" Content="Wóki tóki" HorizontalAlignment="Left" Margin="127,201,0,0" VerticalAlignment="Top" Width="93" Height="44" RenderTransformOrigin="0.5,0.5" Click="Load">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="31.326"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Label Name="asd" Content="0:00" HorizontalAlignment="Left" Margin="60,132,0,0" VerticalAlignment="Top" Width="56" Height="34"/>
-        <Label Name="asd2" Content="0:00" HorizontalAlignment="Left" Margin="660,375,0,0" VerticalAlignment="Top" Width="80" Height="34"/>
-        <Label Name="title" Content="" HorizontalAlignment="Left" Margin="208,234,0,0" VerticalAlignment="Top" Width="311" RenderTransformOrigin="0.5,0.5" Height="63" FontSize="25">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="23.11"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Slider x:Name="volume" HorizontalAlignment="Left" Margin="694,276,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" ValueChanged="SteVolume">
-            <Slider.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="268.636"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Slider.RenderTransform>
-        </Slider>
+        
     </Grid>
 </Window>
