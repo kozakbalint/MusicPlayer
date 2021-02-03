@@ -15,7 +15,7 @@ namespace MusicPlayer
 
         public Player(string path, double volume)
         {
-            reader = new AudioFileReader(path) { Volume = (float) volume };
+            reader = new AudioFileReader(path) { Volume = (float)volume };
             output = new DirectSoundOut(200);
             output.PlaybackStopped += Output_PlaybackStopped;
             var wc = new WaveChannel32(reader);
@@ -27,8 +27,11 @@ namespace MusicPlayer
         {
             if (repeate)
             {
-                SetPosition(0);
-                output.Play();
+                if(output != null)
+                {
+                    SetPosition(0);
+                    output.Play();
+                }
             }
             else
             {
