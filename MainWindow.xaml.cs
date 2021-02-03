@@ -1,7 +1,10 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Threading;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace MusicPlayer
 {
@@ -249,7 +252,25 @@ namespace MusicPlayer
             if (ofd.FileName != null)
             {
                 pl.Load(ofd.FileName);
-                UpdateList();
+                
+            }
+        }
+
+        private void OpenFolder(object sender, RoutedEventArgs e)
+        {
+            var cofd = new CommonOpenFileDialog();
+            cofd.IsFolderPicker = true;
+            var result = cofd.ShowDialog();
+            if (result == CommonFileDialogResult.Ok)
+            {
+                var folderName = cofd.FileName;
+                var audioFiles = Directory.EnumerateFiles(folderName, "*.*", SearchOption.AllDirectories)
+                                          .Where(f => f.EndsWith(".wav") || f.EndsWith(".mp3") || f.EndsWith(".wma") || f.EndsWith(".ogg") || f.EndsWith(".flac"));
+                foreach (var audioFile in audioFiles)
+                {
+                    pl.AddSong(new Song(audioFile));
+                    UpdateList();
+                }
             }
         }
     }

@@ -19,10 +19,11 @@
         <ListBox x:Name="songs" HorizontalAlignment="Left" Height="350" Margin="150,55,0,0" VerticalAlignment="Top" Width="395" MouseDoubleClick="SelectSong"/>
         <Label Content="Songs:" HorizontalAlignment="Left" Margin="150,15,0,0" VerticalAlignment="Top" Width="186" Height="35"/>
         <Button Content="Open Song" HorizontalAlignment="Left" Margin="588,55,0,0" VerticalAlignment="Top" Width="154" Click="OpenSong"/>
-        <Button Content="Save Playlist" HorizontalAlignment="Left" Margin="588,105,0,0" VerticalAlignment="Top" Width="154" Click="SavePlaylist"/>
-        <Button Content="Load Playlist" HorizontalAlignment="Left" Margin="588,130,0,0" VerticalAlignment="Top" Width="154" Click="LoadPlaylist"/>
+        <Button Content="Save Playlist" HorizontalAlignment="Left" Margin="588,130,0,0" VerticalAlignment="Top" Width="154" Click="SavePlaylist"/>
+        <Button Content="Load Playlist" HorizontalAlignment="Left" Margin="588,155,0,0" VerticalAlignment="Top" Width="154" Click="LoadPlaylist"/>
         <Label x:Name="currentTime" Content="00:00" HorizontalAlignment="Left" Margin="156,436,0,0" VerticalAlignment="Top"/>
         <Label x:Name="length" Content="00:00" HorizontalAlignment="Left" Margin="704,436,0,0" VerticalAlignment="Top"/>
-        <Button Content="Remove Selected Song" HorizontalAlignment="Left" Margin="588,80,0,0" VerticalAlignment="Top" Width="154" Click="RemoveSong"/>
+        <Button Content="Remove Selected Song" HorizontalAlignment="Left" Margin="588,105,0,0" VerticalAlignment="Top" Width="154" Click="RemoveSong"/>
+        <Button Content="Open Folder" HorizontalAlignment="Left" Margin="588,80,0,0" VerticalAlignment="Top" Width="154" Click="OpenFolder"/>
     </Grid>
 </Window>
