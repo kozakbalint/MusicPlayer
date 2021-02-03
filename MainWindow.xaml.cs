@@ -253,5 +253,17 @@ namespace MusicPlayer
                 pl.Save(System.IO.Path.GetFileNameWithoutExtension(sfd.FileName),sfd.FileName);
             }
         }
+
+        private void LoadPlaylist(object sender, RoutedEventArgs e)
+        {
+            var ofd = new OpenFileDialog();
+            ofd.Filter = "PLAYLIST files (*.pl) | *.pl";
+            var result = ofd.ShowDialog();
+            if (ofd.FileName != null)
+            {
+                pl.Load(ofd.FileName);
+                UpdateList();
+            }
+        }
     }
 }

@@ -39,6 +39,7 @@ namespace MusicPlayer
         {
             StreamReader sr = new StreamReader(path);
             name = sr.ReadLine();
+            songs.Clear();
             while (!sr.EndOfStream)
             {
                 songs.Add(new Song(sr.ReadLine()));
