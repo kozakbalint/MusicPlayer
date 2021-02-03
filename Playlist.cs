@@ -6,12 +6,13 @@ namespace MusicPlayer
 {
     class Playlist
     {
-        public List<Song> songs;
+        private List<Song> songs;
         private string name;
 
-        public Playlist()
+        public Playlist(string playlistName)
         {
             songs = new List<Song>();
+            name = playlistName;
         }
 
         public void AddSong(Song song)
@@ -21,18 +22,23 @@ namespace MusicPlayer
 
         public void RemoveSong(Song song)
         {
-            songs.Remove(song);
+            foreach (var item in songs)
+            {
+                if (item.GetTitle == song.GetTitle)
+                {
+                    songs.Remove(item);
+                }
+            }
         }
 
-        public void Save(string playlistName, string path)
+        public void Save()
         {
-            StreamWriter sw = new StreamWriter(path);
-            sw.WriteLine(playlistName);
+            StreamWriter sw = new StreamWriter($"D:\\dev\\MusicPlayer\\Playlists\\{name}.pl");
+            sw.WriteLine(name);
             foreach (var item in songs)
             {
                 sw.WriteLine(item.GetPath);
             }
-            sw.Close();
         }
 
         public void Load(string path)
@@ -43,7 +49,6 @@ namespace MusicPlayer
             {
                 songs.Add(new Song(sr.ReadLine()));
             }
-            sr.Close();
         }
     }
 }

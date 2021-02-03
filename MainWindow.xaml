@@ -5,24 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicPlayer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="850">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Slider x:Name="seekBar" HorizontalAlignment="Left" Margin="199,441,0,0" VerticalAlignment="Top" Width="500" ValueChanged="SetSeekbar"/>
-        <Slider x:Name="volume" HorizontalAlignment="Left" Margin="746,441,0,0" VerticalAlignment="Top" Width="86" ValueChanged="SetVolume"/>
-        <Button Content="Stop" HorizontalAlignment="Left" Margin="249,416,0,0" VerticalAlignment="Top" Width="75" Click="Stop"/>
-        <Button Content="Prev" HorizontalAlignment="Left" Margin="329,416,0,0" VerticalAlignment="Top" Width="75" Click="Prev"/>
-        <Button Content="Play / Pause" HorizontalAlignment="Left" Margin="409,416,0,0" VerticalAlignment="Top" Width="75" Click="PlayPause"/>
-        <Button Content="Next" HorizontalAlignment="Left" Margin="489,416,0,0" VerticalAlignment="Top" Width="75" Click="Next"/>
-        <Button x:Name="repeatBtn" Content="Repeat Off" HorizontalAlignment="Left" Margin="569,416,0,0" VerticalAlignment="Top" Width="75" Click="Repeat"/>
-        <Label x:Name="title" Content="Title" HorizontalAlignment="Left" Margin="10,405,0,0" VerticalAlignment="Top" Width="184"/>
-        <Label x:Name="artists" Content="Artists" HorizontalAlignment="Left" Margin="10,433,0,0" VerticalAlignment="Top" Width="141"/>
-        <ListBox x:Name="songs" HorizontalAlignment="Left" Height="350" Margin="150,55,0,0" VerticalAlignment="Top" Width="395" MouseDoubleClick="SelectSong"/>
-        <Label Content="Songs:" HorizontalAlignment="Left" Margin="150,15,0,0" VerticalAlignment="Top" Width="186" Height="35"/>
-        <Button Content="Open Song" HorizontalAlignment="Left" Margin="588,55,0,0" VerticalAlignment="Top" Width="154" Click="OpenSong"/>
-        <Button Content="Save Playlist" HorizontalAlignment="Left" Margin="588,105,0,0" VerticalAlignment="Top" Width="154" Click="SavePlaylist"/>
-        <Button Content="Load Playlist" HorizontalAlignment="Left" Margin="588,130,0,0" VerticalAlignment="Top" Width="154"/>
-        <Label x:Name="currentTime" Content="00:00" HorizontalAlignment="Left" Margin="156,436,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="length" Content="00:00" HorizontalAlignment="Left" Margin="704,436,0,0" VerticalAlignment="Top"/>
-        <Button Content="Remove Selected Song" HorizontalAlignment="Left" Margin="588,80,0,0" VerticalAlignment="Top" Width="154" Click="RemoveSong"/>
+        
     </Grid>
 </Window>
