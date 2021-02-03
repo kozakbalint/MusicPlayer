@@ -7,8 +7,11 @@ namespace MusicPlayer
     {
         private DirectSoundOut output;
         private AudioFileReader reader;
+        private bool repeate;
 
         public PlaybackState GetPlaybackState => output.PlaybackState;
+        public bool GetRepeate => repeate;
+        public bool SetRepeate { set => repeate = value; }
 
         public Player(string path, double volume)
         {
@@ -22,7 +25,15 @@ namespace MusicPlayer
 
         private void Output_PlaybackStopped(object sender, StoppedEventArgs e)
         {
-            Dispose();
+            if (repeate)
+            {
+                SetPosition(0);
+                output.Play();
+            }
+            else
+            {
+                Dispose();
+            }
         }
 
         public void Dispose()
