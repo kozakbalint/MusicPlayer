@@ -7,11 +7,11 @@ namespace MusicPlayer
     {
         private DirectSoundOut output;
         private AudioFileReader reader;
-        private bool repeate;
+        private bool repeat;
 
         public PlaybackState GetPlaybackState => output.PlaybackState;
-        public bool GetRepeate => repeate;
-        public bool SetRepeate { set => repeate = value; }
+        public bool GetRepeate => repeat;
+        public bool SetRepeate { set => repeat = value; }
 
         public Player(string path, double volume)
         {
@@ -25,7 +25,7 @@ namespace MusicPlayer
 
         private void Output_PlaybackStopped(object sender, StoppedEventArgs e)
         {
-            if (repeate)
+            if (repeat)
             {
                 if(output != null)
                 {
